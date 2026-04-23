@@ -5,18 +5,17 @@
    ============================================================================= */
 @theme {
   /* -- Brand Colors -- */
-  /* Change these to match your brand identity */
-  --color-brand-50: #f0f9ff;
-  --color-brand-100: #e0f2fe;
-  --color-brand-200: #bae6fd;
-  --color-brand-300: #7dd3fc;
-  --color-brand-400: #38bdf8;
-  --color-brand-500: #0ea5e9;
-  --color-brand-600: #0284c7;
-  --color-brand-700: #0369a1;
-  --color-brand-800: #075985;
-  --color-brand-900: #0c4a6e;
-  --color-brand-950: #082f49;
+  --color-brand-50: #f8f3ef;
+  --color-brand-100: #f0e3da;
+  --color-brand-200: #e3c5b2;
+  --color-brand-300: #d5a084;
+  --color-brand-400: #ca7f5f;
+  --color-brand-500: #b85f3a;
+  --color-brand-600: #964828;
+  --color-brand-700: #75361d;
+  --color-brand-800: #512414;
+  --color-brand-900: #32140c;
+  --color-brand-950: #1d0c08;
 
   /* -- Font Family --
    * `--font-sans` is injected by `next/font/google` in layout.tsx.
@@ -60,7 +59,11 @@ html {
 }
 
 body {
-  @apply bg-white text-gray-900 antialiased;
+  background:
+    radial-gradient(circle at top left, rgba(184, 95, 58, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(50, 20, 12, 0.1), transparent 24%),
+    linear-gradient(180deg, #fffdfb 0%, #f7f0ea 100%);
+  @apply text-gray-900 antialiased;
 }
 
 /* Selection color */
