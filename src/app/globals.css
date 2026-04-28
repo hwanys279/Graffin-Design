@@ -1,72 +1,39 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
-/* =============================================================================
-   Tailwind v4 Theme Configuration
-   ============================================================================= */
 @theme {
-  /* -- Brand Colors -- */
-  --color-brand-50: #f8f3ef;
-  --color-brand-100: #f0e3da;
-  --color-brand-200: #e3c5b2;
-  --color-brand-300: #d5a084;
-  --color-brand-400: #ca7f5f;
-  --color-brand-500: #b85f3a;
-  --color-brand-600: #964828;
-  --color-brand-700: #75361d;
-  --color-brand-800: #512414;
-  --color-brand-900: #32140c;
-  --color-brand-950: #1d0c08;
+  --color-brand-50: #eef1ff;
+  --color-brand-100: #dce2ff;
+  --color-brand-200: #b4c2ff;
+  --color-brand-300: #90a2ff;
+  --color-brand-400: #7388ff;
+  --color-brand-500: #5d4dff;
+  --color-brand-600: #4c3af0;
+  --color-brand-700: #3b2bd0;
+  --color-brand-800: #2b219f;
+  --color-brand-900: #191963;
+  --color-brand-950: #0d0e2b;
 
-  /* -- Font Family --
-   * `--font-sans` is injected by `next/font/google` in layout.tsx.
-   * If the designer adds a display font for headings, expose it as
-   * `--font-display` here too and apply via `font-[var(--font-display)]`.
-   */
-  --font-sans: var(--font-sans), system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-    sans-serif;
-
-  /* -- Animations -- */
-  --animate-fade-in: fadeIn 0.8s ease-out forwards;
-  --animate-slide-up: slideUp 0.6s ease-out forwards;
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  --font-sans: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-display), Georgia, serif;
 }
 
-/* =============================================================================
-   Base Styles
-   ============================================================================= */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background:
-    radial-gradient(circle at top left, rgba(184, 95, 58, 0.16), transparent 28%),
-    radial-gradient(circle at top right, rgba(50, 20, 12, 0.1), transparent 24%),
-    linear-gradient(180deg, #fffdfb 0%, #f7f0ea 100%);
-  @apply text-gray-900 antialiased;
+  background: #07070b;
+  color: #ffffff;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Selection color */
+#__next {
+  overflow-x: hidden;
+}
+
 ::selection {
-  @apply bg-brand-200 text-brand-900;
+  @apply bg-brand-500 text-white;
 }
