@@ -57,19 +57,19 @@ export default function ApplyPage() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 xl:grid-cols-[0.95fr_1.05fr] xl:items-start">
-            <section className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur-sm md:p-7">
+          <div className="mt-14 grid gap-6 xl:grid-cols-[0.95fr_1.05fr] xl:items-stretch">
+            <section className="flex h-full flex-col rounded-[30px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur-sm md:p-7">
               <p className="text-[10px] uppercase tracking-[0.22em] text-[#9ea8ff] md:text-[11px]">
                 Programs
               </p>
               <h2 className="mt-4 font-[var(--font-display)] text-[clamp(1.5rem,2.4vw,2.2rem)] font-normal leading-[1.14] tracking-[-0.015em] text-white">
                 지원 프로그램
               </h2>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <div className="mt-6 flex flex-1 flex-col gap-3">
                 {focusItems.map((item) => (
                   <div
                     key={item}
-                    className="rounded-[22px] border border-white/10 bg-black/20 px-4 py-4 text-[13px] leading-6 tracking-[0.01em] text-white/82"
+                    className="flex min-h-[72px] items-center rounded-[22px] border border-white/10 bg-black/20 px-5 py-4 text-[14px] leading-6 tracking-[0.01em] text-white/82"
                   >
                     {item}
                   </div>
@@ -77,7 +77,7 @@ export default function ApplyPage() {
               </div>
             </section>
 
-            <section className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur-sm md:p-7">
+            <section className="flex h-full flex-col rounded-[30px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur-sm md:p-7">
               <p className="text-[10px] uppercase tracking-[0.22em] text-[#9ea8ff] md:text-[11px]">
                 Graffin Benefits
               </p>
@@ -138,4 +138,5 @@ export default function ApplyPage() {
     </main>
   );
 }
+
 
