@@ -2,29 +2,25 @@
 import { TeamApplicationForm } from "../../components/team-application-form";
 
 const focusItems = [
-  "일러스트레이터",
-  "포토샵",
-  "프리미어 프로",
-  "애프터이펙트",
-  "피그마",
+  "Adobe Illustrator",
+  "Adobe Photoshop",
+  "Adobe Premiere Pro",
+  "Adobe After Effects",
+  "Figma",
 ];
 
-const benefits = [
+const values = [
   {
-    title: "Creative Flow",
-    description: "소속 디자이너들과 함께 작업하며 결과물을 확장하는 연구소형 협업 구조",
+    title: "Collaborative Flow",
+    description: "혼자 배우는 과정이 아니라, 함께 작업하고 피드백을 주고받으며 결과물을 확장하는 흐름을 지향합니다.",
   },
   {
-    title: "Mentoring",
-    description: "실무 기반 피드백과 자연스러운 멘토링 안에서 작업 밀도를 높이는 과정",
+    title: "Practical Mentoring",
+    description: "실무 감각을 바탕으로 한 자연스러운 멘토링 안에서 작업의 밀도와 완성도를 높입니다.",
   },
   {
-    title: "Portfolio",
-    description: "개인 작업과 공동 프로젝트를 통해 포트폴리오에 남는 결과물을 만드는 흐름",
-  },
-  {
-    title: "Lab Culture",
-    description: "혼자보다 함께 만들 때 더 좋아지는 감각과 협업의 리듬을 경험하는 환경",
+    title: "Creative Archive",
+    description: "개인의 작업이 포트폴리오와 공동 결과물로 이어질 수 있도록 기록과 축적의 구조를 함께 만듭니다.",
   },
 ];
 
@@ -33,7 +29,7 @@ export default function ApplyPage() {
     <main className="min-h-screen bg-[#07070b] text-white">
       <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(93,77,255,0.18),transparent_24%),radial-gradient(circle_at_82%_16%,rgba(47,107,255,0.16),transparent_22%)]" />
-        <div className="relative mx-auto max-w-[1180px] px-5 pb-14 pt-8 md:px-8 md:pb-18 md:pt-10 xl:px-10 xl:pb-20">
+        <div className="relative mx-auto max-w-[1180px] px-5 pb-18 pt-8 md:px-8 md:pb-24 md:pt-10 xl:px-10 xl:pb-28">
           <div className="flex items-center justify-between gap-4">
             <Link
               href="/"
@@ -46,48 +42,59 @@ export default function ApplyPage() {
             </span>
           </div>
 
-          <div className="mt-12 grid gap-8 xl:grid-cols-[0.94fr_1.06fr] xl:items-start">
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.24em] text-[#9ea8ff] md:text-[11px]">
-                Graffin Design Lab
-              </p>
-              <h1 className="mt-6 font-[var(--font-display)] text-[clamp(2.6rem,5.4vw,5rem)] font-normal leading-[1.02] tracking-[-0.02em] text-white">
-                Mentoring
-                <br />
-                Team Apply
-              </h1>
-              <p className="mt-6 max-w-xl text-[14px] leading-[1.95] tracking-[-0.01em] text-white/62 md:text-[15px]">
-                Graffin Design Lab은 디자이너들이 함께 작업하고 협업하는 크리에이티브 디자인 연구소입니다.
-                이번 신청은 멘토링과 협업 흐름 안에서 함께 성장할 디자이너를 위한 모집 페이지입니다.
-              </p>
+          <div className="mt-14 max-w-3xl">
+            <p className="text-[10px] uppercase tracking-[0.24em] text-[#9ea8ff] md:text-[11px]">
+              Graffin Design Lab
+            </p>
+            <h1 className="mt-6 font-[var(--font-display)] text-[clamp(2.7rem,5.4vw,5.2rem)] font-normal leading-[1.03] tracking-[-0.02em] text-white">
+              Mentoring
+              <br />
+              Team Apply
+            </h1>
+            <p className="mt-7 max-w-2xl text-[14px] leading-[2] tracking-[-0.01em] text-white/62 md:text-[15px]">
+              Graffin Design Lab은 디자이너들이 함께 작업하고 협업하는 크리에이티브 디자인 연구소입니다.
+              이번 신청은 멘토링과 협업 흐름 안에서 함께 성장할 디자이너를 위한 모집 페이지입니다.
+            </p>
+          </div>
 
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+          <div className="mt-14 grid gap-6 xl:grid-cols-[0.95fr_1.05fr] xl:items-start">
+            <section className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur-sm md:p-7">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-[#9ea8ff] md:text-[11px]">
+                Programs
+              </p>
+              <h2 className="mt-4 font-[var(--font-display)] text-[clamp(1.5rem,2.4vw,2.2rem)] font-normal leading-[1.14] tracking-[-0.015em] text-white">
+                지원 프로그램
+              </h2>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 {focusItems.map((item) => (
                   <div
                     key={item}
-                    className="rounded-[22px] border border-white/10 bg-white/[0.04] px-4 py-4 text-[13px] leading-6 tracking-[0.01em] text-white/80 backdrop-blur-sm"
+                    className="rounded-[22px] border border-white/10 bg-black/20 px-4 py-4 text-[13px] leading-6 tracking-[0.01em] text-white/82"
                   >
                     {item}
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              {benefits.map((benefit) => (
-                <article
-                  key={benefit.title}
-                  className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.22)] backdrop-blur-sm"
-                >
-                  <p className="text-[10px] uppercase tracking-[0.24em] text-[#9ea8ff] md:text-[11px]">
-                    {benefit.title}
-                  </p>
-                  <p className="mt-4 text-[14px] leading-7 tracking-[-0.01em] text-white/72">
-                    {benefit.description}
-                  </p>
-                </article>
-              ))}
-            </div>
+            <section className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur-sm md:p-7">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-[#9ea8ff] md:text-[11px]">
+                Graffin Benefits
+              </p>
+              <h2 className="mt-4 font-[var(--font-display)] text-[clamp(1.5rem,2.4vw,2.2rem)] font-normal leading-[1.14] tracking-[-0.015em] text-white">
+                Graffin Benefits
+              </h2>
+              <div className="mt-6 space-y-4">
+                {values.map((value) => (
+                  <article key={value.title} className="rounded-[24px] border border-white/10 bg-black/20 p-5">
+                    <p className="text-[11px] uppercase tracking-[0.16em] text-white/44">{value.title}</p>
+                    <p className="mt-3 text-[14px] leading-7 tracking-[-0.01em] text-white/72">
+                      {value.description}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </section>
           </div>
         </div>
       </section>
@@ -112,11 +119,11 @@ export default function ApplyPage() {
                     지원 프로그램
                   </p>
                   <ul className="space-y-2 text-[14px] leading-7 text-black/70">
-                    <li>일러스트레이터</li>
-                    <li>포토샵</li>
-                    <li>프리미어 프로</li>
-                    <li>애프터이펙트</li>
-                    <li>피그마</li>
+                    <li>Adobe Illustrator</li>
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe Premiere Pro</li>
+                    <li>Adobe After Effects</li>
+                    <li>Figma</li>
                   </ul>
                 </div>
               </div>
@@ -131,3 +138,4 @@ export default function ApplyPage() {
     </main>
   );
 }
+

@@ -148,10 +148,10 @@ export function TeamApplicationForm() {
             className="h-13 w-full rounded-[22px] border border-black/10 bg-[#f7f7fa] px-4 text-[14px] text-black outline-none transition focus:border-black/22 focus:bg-white"
           >
             <option value="">지원 프로그램 선택</option>
-            <option value="illustrator">일러스트레이터</option>
-            <option value="photoshop">포토샵</option>
-            <option value="premiere-pro">프리미어 프로</option>
-            <option value="after-effects">애프터이펙트</option>
+            <option value="illustrator">Adobe Illustrator</option>
+            <option value="photoshop">Adobe Photoshop</option>
+            <option value="premiere-pro">Adobe Premiere Pro</option>
+            <option value="after-effects">Adobe After Effects</option>
             <option value="figma">피그마</option>
           </select>
         </label>
@@ -209,3 +209,5 @@ export function TeamApplicationForm() {
     </form>
   );
 }
+
+
