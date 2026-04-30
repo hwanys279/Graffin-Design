@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import { CollaborationInquiryForm } from "../components/collaboration-inquiry-form";
 
 const heroTags = ["Creative Lab", "Graphic", "Visual", "Web", "Motion"];
 
@@ -242,30 +243,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="join" className="bg-[#f2f3f7] text-black">
+            <section id="join" className="bg-[#f2f3f7] text-black">
         <div className="mx-auto max-w-[1320px] px-5 py-14 md:px-8 xl:px-10 xl:py-18">
-          <div className="rounded-[28px] border border-black/8 bg-white px-6 py-10 shadow-[0_18px_50px_rgba(10,12,20,0.06)] md:px-10 md:py-12">
+          <article className="rounded-[28px] border border-black/8 bg-white px-6 py-10 shadow-[0_18px_50px_rgba(10,12,20,0.06)] md:px-10 md:py-12">
             <p className="text-[10px] uppercase tracking-[0.24em] text-black/42 md:text-[11px]">Join Graffin</p>
             <h2 className="mt-4 font-[var(--font-display)] text-[clamp(1.9rem,3.2vw,2.9rem)] font-normal leading-[1.12] tracking-[-0.015em] text-black">
-              협업 또는 팀원 신청하기
+              팀원 신청 또는 협업 문의하기
             </h2>
-            <p className="mt-5 max-w-2xl text-[14px] leading-[1.9] tracking-[-0.01em] text-black/62 md:text-[15px]">
-              Graffin과 함께 작업하고 싶거나, 연구소의 흐름 안에서 협업하며 성장하고 싶다면 언제든 연결해 주세요.
+            <p className="mt-5 max-w-3xl text-[14px] leading-[1.9] tracking-[-0.01em] text-black/62 md:text-[15px]">
+              팀원 신청은 사이트 안에서 바로 저장되고, 협업 문의 역시 Graffin Design Lab으로 직접 수집됩니다. 원하는 방향에 맞게 아래 버튼으로 진행해 주세요.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="https://walla.my/v/Vj8qveAPv7CS6yfVU1sK" className="rounded-full bg-black px-6 py-3 text-[12px] font-medium tracking-[0.03em] text-white transition hover:bg-black/88">
+            <div className="mt-8 flex flex-wrap items-start gap-3">
+              <a href="/apply" className="inline-flex h-12 items-center justify-center rounded-full bg-black px-6 text-[12px] font-medium tracking-[0.03em] text-white transition hover:bg-black/88">
                 팀원 신청하기
               </a>
-              <a href="https://open.kakao.com/o/suEZVr2h" className="rounded-full border border-black/12 px-6 py-3 text-[12px] font-medium tracking-[0.03em] text-black transition hover:bg-black hover:text-white">
-                협업 문의하기
-              </a>
+              <CollaborationInquiryForm />
             </div>
-          </div>
+          </article>
         </div>
       </section>
     </main>
   );
 }
+
+
+
+
 
 
 
